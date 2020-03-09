@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+
+        <title>reveal.js</title>
+
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/reveal.css" />
+        <link rel="stylesheet" href="css/theme/night.css" />
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/monokai.css" />
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.type = "text/css";
+            link.href = window.location.search.match(/print-pdf/gi)
+                ? "css/print/pdf.css"
+                : "css/print/paper.css";
+            document.getElementsByTagName("head")[0].appendChild(link);
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <section data-markdown>
+                        <textarea data-template>
+                        # Gatsby
+                        ## a static ~site~ PWA generator
+                        </textarea>
+                    </section>
+                    
+                    <section data-markdown>
+                        <textarea data-template>
+                        ## Static generator
+                        #### Single Page App (SPA)
+                        rendered in browser context
+                        #### server based app
+                        renders markup on another one's machine
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                        ## PWA
+                        #### Progressive Web Applications can
+
+                        - be installed on phones' homescreens  
+                        - run background tasks
+                        - cache assets locally
+                        - store data for a long time
+                        - use advanced browser features
+                        - preload things and improve over time
+                        - run offline
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                        ## SEO
+                        
+                        Search engines can hardly crawl dynamic websites
+                        SPA: a page hit must first render the app, then inject the content
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                        ## The JAM stack
+                        #### Javascript, API, markdown
+
+                        - no server framework needed to render content
+                            - ~Wordpress~, ~Typo~, ~Drupal~, ~Kirby~, ~Sulu~, ~Craft~
+                        - no server == no security holes
+                        - no server == no database
+                        - no server == no admin "backend"  
+---
+                        * only server needed: a plain webserver
+                        
+                        - Netlify, Amazon S3, Nginx, IPFS
+                        </textarea>
+                    </section>
+                </section>
+                <section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Gatsby: Features
+
+                            - massive usage of React
+                            - renders all pages on the server
+                            - renders all *content* for each page on the server 
+                            - activates the PWA on static markup 
+                            - injects content for another page 
+                            - content plugins connect any CMS
+                            - consolidates data to GraphQL
+                                - infers types automatically
+
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Gatsby: advantages
+                            
+                            - don't care about CMS
+                            - crazy fast page switches
+                            - full SEO compatibility
+                            - active React frontend app
+                            - 2000 plugins & themes
+                            - defaults to markdown content
+                        </textarea>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Prerequisites
+
+                            - `node` (`nvm`), `npm|x` / `yarn`
+                            - a great editor (vsc, vim)
+                            - basic React understanding  
+                            ---
+                            ## get started
+                            `npx gatsby new demo1`  
+                            `gatsby build`  
+                            `gatsby serve`
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Development mode
+
+                            `gatsby develop`
+
+                            - hot module reloading (HMR)
+                            - instant site updates
+                            - GraphiQL console
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Adding pages
+
+                            - add a page to `src/pages`
+                            - Link them from others
+                            - the rest is plain React.
+
+                            --- 
+
+                            ## Configuration 
+
+                            - modify `gatsby-config.js`
+                        </textarea>
+                    </section>
+
+                </section>
+
+            </div>
+        </div>
+
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                hash: true,
+                dependencies: [
+                    { src: "plugin/markdown/marked.js" },
+                    { src: "plugin/markdown/markdown.js" },
+                    { src: "plugin/highlight/highlight.js" },
+                    { src: "plugin/notes/notes.js", async: true }
+                ]
+            });
+        </script>
+    </body>
+</html>
